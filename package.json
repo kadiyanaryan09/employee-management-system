@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "workspaces": [
+    "crud-api",
+    "employee"
+  ],
+  "scripts": {
+    "install:all": "npm install && npm --prefix ./crud-api install && npm --prefix ./employee install",
+    "start:backend": "npm --prefix ./crud-api start",
+    "dev:frontend": "npm --prefix ./employee run dev",
+    "dev": "npm run dev:frontend",
+    "start": "npm run start:backend"
+  },
+  "dependencies": {
+    "cors": "^2.8.6"
+  }
+}
